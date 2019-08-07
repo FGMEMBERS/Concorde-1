@@ -497,8 +497,34 @@
     <name>Altitude Hold (Altimeter based) Stage 1</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/sonic/altitude</prop>
-      <value>altitude-hold</value>
+      <condition>
+	<or>
+		<equals>
+      			<property>/autopilot/locks/sonic/altitude</property>
+      			<value>altitude-hold</value>
+		</equals>
+		<and>
+   			<property>/instrumentation/nav[0]/in-range</property>
+   			<property>/instrumentation/nav[0]/has-gs</property>
+
+      			<equals>
+       				<property>/controls/autoflight/altitude</property>
+       				<value>gs1-hold</value>
+      			</equals>
+
+			<or>
+        			<greater-than>
+             				<property>/instrumentation/nav[0]/gs-needle-deflection-norm</property>
+             				<value>0.2</value>
+        			</greater-than>
+        			<less-than>
+             				<property>/instrumentation/nav[0]/gs-needle-deflection-norm</property>
+             				<value>-0.2</value>
+        			</less-than>
+			</or>
+		</and>
+	</or>
+      </condition>
     </enable>
     <input>
       <prop>/instrumentation/altimeter[0]/indicated-altitude-ft</prop>
@@ -521,8 +547,34 @@
     <name>Altitude Hold (Altimeter based) Stage 1 (AP 2)</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/sonic/altitude</prop>
-      <value>altitude-hold-2</value>
+      <condition>
+	<or>
+		<equals>
+      			<property>/autopilot/locks/sonic/altitude</property>
+      			<value>altitude-hold-2</value>
+		</equals>
+		<and>
+   			<property>/instrumentation/nav[0]/in-range</property>
+   			<property>/instrumentation/nav[0]/has-gs</property>
+
+      			<equals>
+       				<property>/controls/autoflight/altitude</property>
+       				<value>gs1-hold</value>
+      			</equals>
+
+			<or>
+        			<greater-than>
+             				<property>/instrumentation/nav[0]/gs-needle-deflection-norm</property>
+             				<value>0.2</value>
+        			</greater-than>
+        			<less-than>
+             				<property>/instrumentation/nav[0]/gs-needle-deflection-norm</property>
+             				<value>-0.2</value>
+        			</less-than>
+			</or>
+		</and>
+	</or>
+      </condition>
     </enable>
     <input>
       <prop>/instrumentation/altimeter[1]/indicated-altitude-ft</prop>
@@ -546,8 +598,34 @@
     <name>Altitude Hold (Altimeter based) Stage 2</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/sonic/altitude</prop>
-      <value>altitude-hold</value>
+      <condition>
+	<or>
+		<equals>
+      			<property>/autopilot/locks/sonic/altitude</property>
+      			<value>altitude-hold</value>
+		</equals>
+		<and>
+   			<property>/instrumentation/nav[0]/in-range</property>
+   			<property>/instrumentation/nav[0]/has-gs</property>
+
+      			<equals>
+       				<property>/controls/autoflight/altitude</property>
+       				<value>gs1-hold</value>
+      			</equals>
+
+			<or>
+        			<greater-than>
+             				<property>/instrumentation/nav[0]/gs-needle-deflection-norm</property>
+             				<value>0.2</value>
+        			</greater-than>
+        			<less-than>
+             				<property>/instrumentation/nav[0]/gs-needle-deflection-norm</property>
+             				<value>-0.2</value>
+        			</less-than>
+			</or>
+		</and>
+	</or>
+      </condition>
     </enable>
     <input>
       <prop>/velocities/vertical-speed-fps</prop>
@@ -575,8 +653,34 @@
     <name>Altitude Hold (Altimeter based) Stage 2 (AP2)</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/sonic/altitude</prop>
-      <value>altitude-hold-2</value>
+      <condition>
+	<or>
+		<equals>
+      			<property>/autopilot/locks/sonic/altitude</property>
+      			<value>altitude-hold-2</value>
+		</equals>
+		<and>
+   			<property>/instrumentation/nav[0]/in-range</property>
+   			<property>/instrumentation/nav[0]/has-gs</property>
+
+      			<equals>
+       				<property>/controls/autoflight/altitude</property>
+       				<value>gs1-hold</value>
+      			</equals>
+
+			<or>
+        			<greater-than>
+             				<property>/instrumentation/nav[0]/gs-needle-deflection-norm</property>
+             				<value>0.2</value>
+        			</greater-than>
+        			<less-than>
+             				<property>/instrumentation/nav[0]/gs-needle-deflection-norm</property>
+             				<value>-0.2</value>
+        			</less-than>
+			</or>
+		</and>
+	</or>
+      </condition>
     </enable>
     <input>
       <prop>/instrumentation/vertical-speed-indicator[1]/indicated-speed-fps</prop>

@@ -98,7 +98,7 @@
 
   <milthrust> 31350 </milthrust>
   <maxthrust> 31350 </maxthrust>
-  <bypassratio> 0.0 </bypassratio>
+  <bypassratio> 5.0 </bypassratio>
   <tsfc> 1.190 </tsfc>
   <atsfc> 1.338 </atsfc>
   <idlen1> 30.0 </idlen1>
