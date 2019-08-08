@@ -134,8 +134,8 @@
         		<entry><ind>1.001</ind><dep>-14</dep></entry>
         		<entry><ind>1.2</ind><dep>-52</dep></entry>
         		<entry><ind>1.5</ind><dep>-104</dep></entry>
-        		<entry><ind>2</ind><dep>-171</dep></entry>
-        		<entry><ind>2.2</ind><dep>-200</dep></entry>
+        		<entry><ind>2</ind><dep>-190</dep></entry>
+        		<entry><ind>2.2</ind><dep>-220</dep></entry>
     		</table>
     		<table>  
     			<property>/instrumentation/airspeed-standby/indicated-speed-kt</property>
